@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +9,10 @@
 
 body{
     background-color: rgb(65, 63, 63);
+
+    overflow-x: hidden;
 }
+
 
 div.logo{
     margin-top: 100px;
@@ -50,13 +54,86 @@ div.links a:hover{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
 }
 
-/*==============FILMES=====================*/
+/*==============CABEÇALHO FILMES=====================*/
 
-section.films{
+.header-films{
+    background-color: #E50914;
+
+    display: flex;
+
+    padding: 10px;
+
+    color: white;
+
+    margin-bottom: 50px;
+
+    width: 100vw;
+
+    justify-content: space-between;
+
+}
+
+.void{
+    opacity: 0;
+
+    width: 180px;
+}
+
+.header-films img{
+    width: 50px;
+    background-color: white;
+    border-radius: 100%;
+
+}
+
+
+.search{
+
+    position: relative;
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 50px 50px 50px 50px;
+   
+
+    padding: 0;
+}
+
+.header-films input{
+
+    font-size: 20px;
+    color: white;  
+    border-radius: 50px 0px 0px 50px;
+    text-decoration: none;  
+    outline: 0;
+
     
+
+}
+
+.header-films input,
+.header-films i{
+    background-color: rgb(65, 63, 63);
+    padding: 5px;
+    margin: 0;
+    position: relative;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.383);
+
+  
+}
+
+.header-films i {
+    border-radius: 0px 50px 50px 0px;
+}
+
+/*==============FILMES=====================*/
+section.films{
+
     max-width: 800px;
 
-    margin: 20px auto;
+    margin: 0 auto;
 
     color: white;
 
@@ -64,7 +141,7 @@ section.films{
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 500px 500px;
 
     gap: 10px;
 }
@@ -187,6 +264,8 @@ background-color: rgba(0, 0, 0, 0.137);
     width: 70%;
     height: 80%;
 
+    top: 2px;
+
     margin: 10vh auto;
 
 }
@@ -196,7 +275,7 @@ background-color: rgba(0, 0, 0, 0.137);
     justify-content: center;
     position: relative;
 
-    top:50px;
+    top: 35px;
 
 
 }

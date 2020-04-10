@@ -26,26 +26,38 @@ const closeModal = document.querySelector(".close-modal")
 
 const films = document.querySelectorAll(".film")
 
+const img = document.querySelector("img.ndfHFb-c4YZDc-aTv5jf-bVEB4e-RJLb9c")
+
+const thumbIDs = document.querySelectorAll(".thumb")
+
+
+
 for (let play of plays){
 
-    play.addEventListener("click", function(){
+     play.addEventListener("click", function(){
          
         modal.classList.remove("hide")
 
         const videoID = play.getAttribute("id")
 
-        modal.querySelector("iframe").src = `https://drive.google.com/file/d/${videoID}/preview`        
+        modal.querySelector("iframe").src = `https://drive.google.com/file/d/${videoID}/preview`   
+        
+        alert(img.getAttribute("class"))
     })
-
-
+    // ndfHFb-c4YZDc-aTv5jf-bVEB4e-RJLb9c
 }
+
+
+
+
+
 
 
 closeModal.addEventListener("click", function(){
 
     modal.classList.add("hide")
 
-    document.querySelector("div.modal-content iframe").src = ""
+    modal.querySelector("iframe").src = ``
 
 })
 
