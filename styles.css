@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 
+:root{
+    --color-red:#E50914;
+
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,8 +16,25 @@ body{
     background-color: rgb(65, 63, 63);
 
     overflow-x: hidden;
+
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+  
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(129, 7, 13);
+  
+  }
 
 div.logo{
     margin-top: 100px;
@@ -39,7 +61,7 @@ div.links a{
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
 
-    background-color: #E50914;
+    background-color: var(--color-red);
     padding: 5px 10px;
     border-radius: 5px;
     
@@ -57,7 +79,7 @@ div.links a:hover{
 /*==============CABEÇALHO FILMES=====================*/
 
 .header-films{
-    background-color: #E50914;
+    background-color: var(--color-red);
 
     display: flex;
 
@@ -128,6 +150,16 @@ div.links a:hover{
     border-radius: 0px 50px 50px 0px;
 }
 
+
+.footer-film{
+    width: 100%;
+    height: 100px;
+
+    margin-top: 50px;
+
+    background-color: white;
+}
+
 /*==============FILMES=====================*/
 section.films{
 
@@ -152,7 +184,7 @@ section.films{
 
     grid-template-columns: 200px 300px;
 
-    background-color: #E50914;
+    background-color: var(--color-red);
 
     width: 200px;
 
@@ -218,7 +250,7 @@ background-color: rgba(0, 0, 0, 0.137);
 .play-button a{
     
     background-color: white;
-    color: #E50914;
+    color: var(--color-red);
 
     font-size: 25px;
     font-weight: 700;
