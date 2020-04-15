@@ -1,0 +1,84 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <header class="header-films">
+
+        <a href="/">
+        <img src="/logo-nivekflix.png" alt="">
+        </a>
+        <div class="search">
+        <input type="text"> <i class="material-icons">search</i>
+        </div>
+
+        <div class="void"></div>
+        
+    </header>
+
+    
+    <section class="films">
+
+        {% for item in items %}
+        <div class="film" >
+            
+            <div class="img-film film-grid" >
+                <img src=" {{item.imgCover}} " alt="capa do filme" class="teste">
+
+            </div>
+
+            <div class="film-grid film-texts">
+                <div class="film-title">
+                 <h1 class="title-text">{{item.title}}</h1>
+                </div>
+                <div class="film-sinopse">
+                    <p><strong>Sinopse:</strong> {{item.sinopse}}.
+                    </p>
+                </div>
+                <div class="film-info">
+                    <p><strong>Áudio:</strong> {{item.audio}}</p> 
+                    <p><strong>Video:</strong> {{item.video}}</p> 
+                    <p><strong>Legenda:</strong> {{item.legenda}}</p>
+                    <p><strong>Idioma:</strong> {{item.idioma}}</p> 
+                    <p><strong>Duração:</strong> {{item.duracao}}</p>
+
+                </div>
+            </div>
+
+            <div class="film-grid play-button" id="{{item.id}}">
+                <a>Assistir</a>
+            </div>
+
+            
+        </div>
+
+        {%endfor%}
+        
+
+    </section>
+
+    <footer class="footer-film">
+        
+    </footer>
+
+    <!--====MODAL=====-->
+
+    <section id="modal-overlay" class="hide">
+
+        <div class="modal-window">
+            <h1></h1>
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+
+            <div class="modal-content">
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="/scripts.js"></script>
+
+ {% endblock %}

@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+:root{
+    --color-red:#E50914;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: rgb(65, 63, 63);
+
+    overflow-x: hidden;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+
+    background-color: rgba(255, 255, 255, 0.294);
+  
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(129, 7, 13);
+  
+  }
+
+div.logo{
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+}
+
+
+div.logo img{
+    width: 300px;
+}
+
+div.links{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 25px;
+   
+}
+
+div.links a{
+
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+
+    background-color: var(--color-red);
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.301);
+
+    transition: 200ms;
+
+}
+
+div.links a:hover{
+    background-color: rgb(179, 10, 18);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
+}
+
+/*==============CABEÇALHO FILMES=====================*/
+
+.header-films{
+    background-color: var(--color-red);
+
+    display: flex;
+
+    padding: 10px;
+
+    color: white;
+
+    margin-bottom: 50px;
+
+    width: 100vw;
+
+    justify-content: space-between;
+
+}
+
+.void{
+    opacity: 0;
+
+    width: 180px;
+}
+
+.header-films img{
+    width: 50px;
+    background-color: white;
+    border-radius: 100%;
+
+}
+
+
+.search{
+
+    position: relative;
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 50px 50px 50px 50px;
+   
+
+    padding: 0;
+}
+
+.header-films input{
+
+    font-size: 20px;
+    color: white;  
+    border-radius: 50px 0px 0px 50px;
+    text-decoration: none;  
+    outline: 0;
+
+    
+
+}
+
+.header-films input,
+.header-films i{
+    background-color: rgb(65, 63, 63);
+    padding: 5px;
+    margin: 0;
+    position: relative;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.383);
+
+  
+}
+
+.header-films i {
+    border-radius: 0px 50px 50px 0px;
+}
+
+
+.footer-film{
+    width: 100%;
+    height: 100px;
+
+    margin-top: 50px;
+
+    background-color: rgb(36, 35, 35);
+}
+
+/*==============FILMES=====================*/
+section.films{
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    color: white;
+
+    font-family: 'Noto Sans', sans-serif;
+
+    display: grid;
+
+    grid-template-columns: 500px 500px;
+
+    gap: 10px;
+}
+
+
+
+
+.film{
+    display: grid;
+
+    grid-template-columns: 200px 300px;
+
+    background-color: var(--color-red);
+
+    width: 200px;
+
+    height: auto;
+
+    overflow: hidden;
+
+    transition: 200ms;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    
+}
+
+.film:hover{
+    width: 500px;
+}
+
+.film-grid:nth-child(1){
+    grid-row: 1/3;
+
+}
+
+.img-film img{
+    width: 200px;
+}
+
+.film-texts{
+    display: flex;
+    flex-direction: column;
+}
+
+.film-title{
+    
+    text-align: center;
+    font-size: 13px;
+}
+
+.film-title h1{
+    padding: 5px;
+    
+    background-color: rgba(0, 0, 0, 0.26);
+    
+}
+
+.film-sinopse, 
+.film-info{
+    padding: 5px;
+}
+
+.film-sinopse p{
+    white-space: normal;
+    font-size: 13px;
+
+}
+
+.film-info{
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+.play-button{
+background-color: rgba(0, 0, 0, 0.137);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.play-button a{
+    
+    background-color: white;
+    color: var(--color-red);
+
+    font-size: 25px;
+    font-weight: 700;
+    padding: 5px 15px;
+
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 10px black;
+
+}
+
+.play-button a:hover{
+
+    color: white;
+    background-color: rgb(141, 5, 11);
+
+    cursor: pointer;
+
+    box-shadow: 1px 1px 10px black;
+}
+
+
+/*======MODAL========*/
+
+#modal-overlay{
+    background-color: rgba(0, 0, 0, 0.609);
+
+    position: relative;
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+  
+    top: 0;
+
+}
+
+.modal-window{
+    background-color: white;
+
+    position: relative;
+    
+    width: 70%;
+    height: 80%;
+
+    top: 2px;
+
+    margin: 10vh auto;
+
+}
+
+.modal-content{
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    top: 35px;
+
+
+}
+
+.modal-content iframe{
+   position: absolute;
+
+   width: 100%;
+   height: 80vh;
+}
+
+.close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.hide{
+    opacity: 0;
+
+    visibility: hidden;
+}
