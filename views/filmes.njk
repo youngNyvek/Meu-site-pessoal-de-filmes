@@ -1,12 +1,12 @@
 {% extends "layout.njk" %}
 
-{% block content %}
 
-    <header class="header-films">
+{% block header %}
 
+ <header class="header-films">
         <a href="/">
-        <img src="/logo-nivekflix.png" alt="">
-        </a>
+         <img src="/logo-nivekflix.png" alt="">
+        </a>       
         <div class="search">
         <input type="text"> <i class="material-icons">search</i>
         </div>
@@ -14,7 +14,9 @@
         <div class="void"></div>
         
     </header>
+{% endblock header %}
 
+{% block content %}
     
     <section class="films">
 
@@ -45,7 +47,7 @@
             </div>
 
             <div class="film-grid play-button" id="{{item.id}}">
-                <a>Assistir</a>
+                <a >Assistir</a>
             </div>
 
             
@@ -59,25 +61,6 @@
     <footer class="footer-film">
         
     </footer>
-
-    <!--====MODAL=====-->
-
-    <section id="modal-overlay" class="hide">
-
-        <div class="modal-window">
-            <h1></h1>
-            <a class="close-modal">
-                <i class="material-icons">close</i>
-            </a>
-
-            <div class="modal-content">
-                <iframe src="" frameborder="0" allowfullscreen></iframe>
-
-            </div>
-
-        </div>
-
-    </section>
 
     <script src="/scripts.js"></script>
 
